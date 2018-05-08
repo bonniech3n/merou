@@ -5,17 +5,25 @@
         <title>{% block title %}Grouper{% endblock %}</title>
 
         <link href="{{cdnjs_prefix}}/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css"
+              integrity="sha384-7tY7Dc2Q8WQTKGz2Fa0vC4dWQo07N4mJjKvHfIGnxuC4vPqFGFQppd9b3NWpf18/"
+              crossorigin="anonymous"
               rel="stylesheet"
               media="screen">
         <link href="{{cdnjs_prefix}}/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"
+              integrity="sha384-X7L1bhgb36bF1iFvaqvhgpaGpayKM+vXNNYRlF89BFA5s3vi1qZ8EX9086RlZjy1"
+              crossorigin="anonymous"
               rel="stylesheet"
               media="screen">
         <link href="{{cdnjs_prefix}}/ajax/libs/bootstrap-datetimepicker/3.0.0/css/bootstrap-datetimepicker.min.css"
+              integrity="sha384-c/e7tOQUQfRaG+FTQexGfZ8DFzStIWg5qsrdeL5aJAekreKy9h1fT1FhVE5/s7h5"
+              crossorigin="anonymous"
               rel="stylesheet"
               media="screen">
-    <link href="/{{cdnjs_prefix}}/ajax/libs/datatables/1.10.10/css/dataTables.bootstrap.min.css"
-          rel="stylesheet"
-          media="screen">
+        <link href="/{{cdnjs_prefix}}/ajax/libs/datatables/1.10.10/css/dataTables.bootstrap.min.css"
+              integrity="sha384-I0DlhgMWj8tVEByK8+8wZdxzlNCIakbmQxjjrn1vqZ09eNyKQUS4z4EsCkbtAmFO"
+              crossorigin="anonymous"
+              rel="stylesheet"
+              media="screen">
         <link href="/static/css/grouper.css" rel="stylesheet" media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -98,11 +106,22 @@
       </div>
     </footer>
 
-        <script src="{{cdnjs_prefix}}/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="{{cdnjs_prefix}}/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-        <script src="{{cdnjs_prefix}}/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="{{cdnjs_prefix}}/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
-        <script src="{{cdnjs_prefix}}/ajax/libs/datatables/1.10.10/js/jquery.dataTables.min.js"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/jquery/2.1.1/jquery.min.js"
+                integrity="sha384-V2vzHm/4vwRrnPN0dLbxh4hP4Hngnf/KafRjFODPm1QYGNdFQR3yZB5ueUG/wsKJ"
+                crossorigin="anonymous"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/lodash.js/2.4.1/lodash.min.js"
+                integrity="sha384-s/LBB1TjcxhGaLih4VY7qx1ZfN9Xl101HkeUgGd3dAst6kLFB9XJHTA1OLzo7yll"
+                crossorigin="anonymous"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"
+                integrity="sha384-oFMgcGzKX7GaHtF4hx14KbxdsGjyfHK6m1comHjI1FH6g4m6qYre+4cnZbwaYbHD"
+                crossorigin="anonymous"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/moment.js/2.7.0/moment.min.js"
+                integrity="sha384-2LcdrqyeuYfkqNyaMqVVwjokDbijLM29XrgEGhf0sYVKpqCjcyym/NRWspSJy0UJ"
+                crossorigin="anonymous"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/datatables/1.10.10/js/jquery.dataTables.min.js"
+                integrity="sha384-QyXw3+FbFWMGvHERjd2qCYZRk+b2Pjmtq15C/hioWsjhRQ7ogFIq/TyxV45EzU1H"
+                crossorigin="anonymous"></script>
+
         <script src="/static/js/grouper.js"></script>
         {% block script %} {% endblock %}
 
