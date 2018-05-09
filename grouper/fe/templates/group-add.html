@@ -32,27 +32,7 @@
 
 {% endblock %}
 
-{% block head %}
-    {# chosen.css covers the basic Chosen UI; chosen.bootstrap.min.css adds the
-       extra classes to make it look compatible with Bootstrap. Both are required.  #}
-    <link href="{{cdnjs_prefix}}/ajax/libs/chosen/1.4.2/chosen.css"
-          integrity="sha384-BYX87TwtwSNNw1aAkI5mKr5HfFp72LMSPURUnlnq/eYA7H4fGAc7XYyJpZ9r3nzH"
-          crossorigin="anonymous"
-          rel="stylesheet"
-          media="screen">
-    <link href="/static/css/ext/chosen-bootstrap-1.0.4/chosen.bootstrap.min.css"
-          rel="stylesheet"
-          media="screen">
-{% endblock %}
-
 {% block script %}
-
-<script src="{{cdnjs_prefix}}/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"
-        integrity="sha384-3X6V7VkXNtvUyKicwuYuOggtEL6K07X7vY4uIcZayrlXCRx3kXTlXTC/KLlF+kZW"
-        crossorigin="anonymous"></script>
-<script src="{{cdnjs_prefix}}/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"
-        integrity="sha384-YVLDcFGsUtSroGeWOOdmJnNmqMzroksYs9hlDGb+SI/ZkMpbqOUhWg/IpdAwYMJF"
-        crossorigin="anonymous"></script>
 
 <script type="text/javascript">
     $(function () {

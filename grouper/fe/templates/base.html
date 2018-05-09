@@ -24,7 +24,19 @@
               crossorigin="anonymous"
               rel="stylesheet"
               media="screen">
-        <link href="/static/css/grouper.css" rel="stylesheet" media="screen">
+        <link href="{{cdnjs_prefix}}/ajax/libs/chosen/1.4.2/chosen.css"
+              integrity="sha384-BYX87TwtwSNNw1aAkI5mKr5HfFp72LMSPURUnlnq/eYA7H4fGAc7XYyJpZ9r3nzH"
+              crossorigin="anonymous"
+              rel="stylesheet"
+              media="screen">
+
+        <link href="/static/css/ext/chosen-bootstrap-1.0.4/chosen.bootstrap.min.css"
+              rel="stylesheet"
+              media="screen">
+        <link href="/static/css/grouper.css"
+              rel="stylesheet"
+              media="screen">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {% block head %} {% endblock %}
@@ -98,13 +110,13 @@
             </div>
         </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted text-center">
-                © 2014-2016 Dropbox, Inc. This project is free software, <a href="https://github.com/dropbox/grouper">get the source</a>.
-            </p>
-      </div>
-    </footer>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted text-center">
+                    © 2014-2016 Dropbox, Inc. This project is free software, <a href="https://github.com/dropbox/grouper">get the source</a>.
+                </p>
+          </div>
+        </footer>
 
         <script src="{{cdnjs_prefix}}/ajax/libs/jquery/2.1.1/jquery.min.js"
                 integrity="sha384-V2vzHm/4vwRrnPN0dLbxh4hP4Hngnf/KafRjFODPm1QYGNdFQR3yZB5ueUG/wsKJ"
@@ -121,10 +133,16 @@
         <script src="{{cdnjs_prefix}}/ajax/libs/datatables/1.10.10/js/jquery.dataTables.min.js"
                 integrity="sha384-QyXw3+FbFWMGvHERjd2qCYZRk+b2Pjmtq15C/hioWsjhRQ7ogFIq/TyxV45EzU1H"
                 crossorigin="anonymous"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"
+                integrity="sha384-YVLDcFGsUtSroGeWOOdmJnNmqMzroksYs9hlDGb+SI/ZkMpbqOUhWg/IpdAwYMJF"
+                crossorigin="anonymous"></script>
+        <script src="{{cdnjs_prefix}}/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"
+                integrity="sha384-3X6V7VkXNtvUyKicwuYuOggtEL6K07X7vY4uIcZayrlXCRx3kXTlXTC/KLlF+kZW"
+                crossorigin="anonymous"></script>
 
         <script src="/static/js/grouper.js"></script>
-        {% block script %} {% endblock %}
 
+        {% block script %} {% endblock %}
     </body>
 </html>
 
