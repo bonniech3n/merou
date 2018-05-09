@@ -24,11 +24,6 @@ $(document).ready(function(){
         $("#tagname").focus();
     });
 
-    $("#formSubmit").click(function() {
-        $("#createFrom").submit();
-    });
-
-
     $("#revokeModal").on("show.bs.modal", function(e) {
         var button = $(e.relatedTarget);
         var mappingId = button.data("mapping-id");
@@ -51,6 +46,20 @@ $(document).ready(function(){
         form.attr("action", "/groups/{{ group.id }}/remove");
         form.find("input[name=member]").val(memberName);
         form.find("input[name=member_type]").val(memberType);
+    });
+
+    $("select#member").attr("data-placeholder", "Select a user or group").chosen();
+
+    $('#add-form-expiration').datetimepicker({
+        pickTime: false,
+        icons: {
+            time: "fa fa-clock-o",
+            date: "fa fa-calendar",
+            up: "fa fa-arrow-up",
+            down: "fa fa-arrow-down"
+        },
+        useCurrent: false,
+        minDate: moment(),
     });
 
     $('#join-form-expiration').datetimepicker({
@@ -88,4 +97,9 @@ $(document).ready(function(){
         useCurrent: false,
         minDate: moment(),
     });
+
+    $("#formSubmit").click(function() {
+        $("#createFrom").submit();
+    });
+
 });
