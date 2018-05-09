@@ -329,6 +329,10 @@ class Group(Model, CommentObjectMixin):
         self.enabled = False
         Counter.incr(self.session, "updates")
 
+    @hybrid_property
+    def auditing(self):
+        return self.audit and not self.audit.complete
+
     @staticmethod
     def get(session, pk=None, name=None):
         if pk is not None:

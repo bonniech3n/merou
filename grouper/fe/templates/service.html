@@ -238,8 +238,15 @@
     {% endif %}
 {% endmacro %}
 
-<div class="modal fade" id="auditModal" tabindex="-1" role="dialog"
-      aria-labelledby="auditModal" aria-hidden="true">
+<div class="modal fade"
+     id="auditModal"
+     tabindex="-1"
+     role="dialog"
+     data-group-auditing="{{ group.auditing }}"
+     data-group-owner="{{ current_user_role['is_owner'] }}"
+     aria-labelledby="auditModal"
+     aria-hidden="true">
+
     <div class="modal-dialog">
         <form action="/audits/{{ group.audit.id }}/complete" method="post"
               style="display: inline;">
@@ -290,15 +297,4 @@
 </div>
 {% endif %}
 
-{% endblock %}
-
-{% block script %}
-
-{% if group.audit and not group.audit.complete and current_user_role['is_owner'] %}
-<script type="text/javascript">
-$(function () {
-    $('#auditModal').modal('show');
-});
-</script>
-{% endif %}
 {% endblock %}

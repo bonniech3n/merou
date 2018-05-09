@@ -102,4 +102,12 @@ $(document).ready(function(){
         $("#createFrom").submit();
     });
 
+    var auditModel = $('#auditModal');
+
+    if (auditModel &&
+        auditModel.data('group-auditing') === 'True' &&
+        auditModel.data('group-owner') === 'True') {
+
+        auditModel.modal('show');
+    }
 });
