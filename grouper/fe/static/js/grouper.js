@@ -127,6 +127,10 @@ $(document).ready(function(){
         function update_args() {
             var args_by_perm = $('.permission-request').data('permission-request');
 
+            if (typeof(args_by_perm) === 'undefined') {
+                return;
+            }
+
             var args = args_by_perm[perm_fields.val()];
             if (perm_fields.val() === "") {
                 // default we show dropdown form (we have to choose one) and
