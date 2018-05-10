@@ -114,7 +114,7 @@ fe:
     # This is the prefix url in template to cdnjs. This allows you to point at
     # and internal mirror for production deployments.
     # Type: str
-    cdnjs_prefix: "//cdnjs.cloudflare.com"
+    cdnjs_prefix: "http://cdnjs.cloudflare.com"
 
     # Header to check for Authenticated Username
     # Type: str
