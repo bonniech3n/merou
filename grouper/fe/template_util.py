@@ -1,6 +1,6 @@
+from base64 import b64encode
 from datetime import datetime
 from hashlib import sha384
-from base64 import b64encode
 import os.path
 
 from dateutil.relativedelta import relativedelta
