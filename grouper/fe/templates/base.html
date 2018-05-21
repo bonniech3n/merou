@@ -29,13 +29,17 @@
               crossorigin="anonymous"
               rel="stylesheet"
               media="screen">
-
         <link href="/static/css/ext/chosen-bootstrap-1.0.4/chosen.bootstrap.min.css"
               rel="stylesheet"
-              media="screen">
+              media="screen"
+              integrity="sha384-1RgGYnScE/R+eBp1NoM3XqWaj/xmoKeN4uCwf0kYgiXmT9lI3b1p4jCsLW5JTKbO"
+              crossorigin="anonymous">
+
         <link href="/static/css/grouper.css"
               rel="stylesheet"
-              media="screen">
+              media="screen"
+              integrity="{{ get_integrity_of_static('css/grouper.css') }}"
+              crossorigin="anonymous">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -140,7 +144,9 @@
                 integrity="sha384-3X6V7VkXNtvUyKicwuYuOggtEL6K07X7vY4uIcZayrlXCRx3kXTlXTC/KLlF+kZW"
                 crossorigin="anonymous"></script>
 
-        <script src="/static/js/grouper.js"></script>
+        <script src="/static/js/grouper.js"
+                integrity="{{ get_integrity_of_static('js/grouper.js') }}"
+                crossorigin="anonymous"></script>
 
         {% block script %} {% endblock %}
     </body>
