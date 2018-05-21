@@ -30,7 +30,7 @@ $(document).ready(function(){
 
         var modal = $(e.currentTarget);
 
-        var form = modal.find(".revoke-permission-form")
+        var form = modal.find(".revoke-permission-form");
         form.attr("action", "/groups/{{group.name}}/service/{{user.username}}/revoke/" + mappingId);
     });
 
@@ -38,12 +38,13 @@ $(document).ready(function(){
         var button = $(e.relatedTarget);
         var memberName = button.data("member-name");
         var memberType = button.data("member-type");
+        var groupId = $('#removeUserModal').data('group-id');
 
         var modal = $(e.currentTarget);
         modal.find(".member-name").html(memberName);
 
         var form = modal.find(".remove-member-form");
-        form.attr("action", "/groups/{{ group.id }}/remove");
+        form.attr("action", "/groups/" + groupId + "/remove");
         form.find("input[name=member]").val(memberName);
         form.find("input[name=member_type]").val(memberType);
     });
